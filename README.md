@@ -29,14 +29,11 @@ To use KAPE in this manner some setup is required.  We need to be able to access
 9. Click  the **"Ok"** button on the Advanced Sharing dialog box
 10. Click the **"Close"** button 
 
+Rather that inserting all the detail about how to share a drive or folder in Windows here is a nice artical and a link to a graphical step by step.
+
 Click this [link](https://www.tomshardware.com/news/how-to-share-drives-windows-pc,36936.html) for an article on Sharing Drives in Windows.
 
 Click this [link](create_shares_steps.png) for a graphical step by step on Sharing Drives in Windows.
-
-
-
-![](create_shares_steps.png)
-
 
 
 Once the share has been created on the target we will create a mapped drive on the collection system to the Target share so we can access it as a drive letter.
@@ -155,7 +152,14 @@ The techniques of running the kape.exe executable from a network share and  writ
 
 The technique I'm going to describe is to use a free, open source service called ZeroTier One.  Basically ZeroTier allows us to create a Software Defined Wide Area Network (SD-WAN) in minutes.  The ZeroTier network that we are going to define will work exactly like the examples that we have shown above.  
 
-Yes,  we are going to install a very small application on the target but we are not going to write KAPE or any of the collected files to the target.  This is a key point.  There have been some very clever techniques published for getting the KAPE executable to the target so that an automated, scripted collection can be easily  run.  **Check out these articles for info on those methods.** Those techniques work exactly as advertised but... they write all the collected data to the target system before forwarding them on to there ultimate destination on an sftp server, Amazon S3, Microsoft Azure.  As discussed earlier, if there is an intention to do a full forensic image of the target at some point or even the possibility of needing the full image,  we really don't want to overwrite unallocated unless there is no other choice.  So,  how does the work.
+Yes,  we are going to install a very small application on the target but we are not going to write KAPE or any of the collected files to the target.  This is a key point.  There have been some very clever techniques published for getting the KAPE executable to the target so that an automated, scripted collection can be easily  run.  **Check out these articles for info on those methods.** 
+
+- [Use KAPE to collect data remotely and globally](http://www.mashthatkey.com/2019/10/use-kape-to-collect-data-remotely-and.html) by Carlos Cajigas
+
+- [KAPE at Scale](https://malwaremaloney.blogspot.com/2020/06/kape-at-scale.html) by Brian Malononey
+
+
+Those techniques work exactly as advertised but... they write all the collected data to the target system before forwarding them on to there ultimate destination on an sftp server, Amazon S3, Microsoft Azure.  As discussed earlier, if there is an intention to do a full forensic image of the target at some point or even the possibility of needing the full image,  we really don't want to overwrite unallocated unless there is no other choice.  So,  how does the work.
 
 All we need to do is:
 
