@@ -1,6 +1,8 @@
-# Remote Collections with KAPE
+# Remote Collections with KAPE including the over the Internet
 
-Triage style collection of remote system data is a fact of life these days and KAPE a excellent tool to preform this task .  Remote collections can have different meaning depending on the context.  Remote could mean a system on the corporate LAN or it could mean as remote system that is only available over the Internet.    We will start with some basics and then show how we can apply the concepts of a LAN collection to the increasingly common situation of collection over the Internet.  
+Mark Hallman - 2020-09-12
+
+Triage style collection of remote system data is a fact of life these days and KAPE has proven to be a excellent tool to preform this task .  The term **remote collection** can have different meanings depending on the context of your collection environment.  Remote could mean a system on the corporate LAN or it could mean a remote system that is only accessible over the Internet thousands of miles away.    We will start with some basics and then show how we can apply the concepts of a UNC paths used on a simple LAN collection to the increasingly common situation of collection over the Internet.  We will use only freebly available, secure, open souce tools to perform this collection.
 
 In this article,  we are assuming  that you have a basic understanding of KAPE terms like targets and modules.  Although we are showing the command line versions of these commands the concepts will work equally well the the GUI version of KAPE.
 
